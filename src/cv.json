@@ -1,0 +1,239 @@
+{
+  "basics": {
+    "name": "Nahuel Gil",
+    "label": "Full-Stack developer with more than 4 years of experience",
+    "image": "/me.webp",
+    "email": "nahuelgil98@gmail.com",
+    "phone": "(+598) 93 700 567",
+    "url": "https://johndoe.com",
+    "summary": "I am an Analyst-Programmer graduated at ORT University. I consider myself an enterprising person with ease to learn, to carry out  tasks. My goal is  to  cultivate and maximize my skills within and outside the Company,how to take advantage of the study and thus progress as a developer",
+    "location": {
+      "address": "",
+      "postalCode": "15100",
+      "city": "Atlantida",
+      "countryCode": "UY",
+      "region": "Canelones"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "nahuelgilcurbelo",
+        "url": "https://www.linkedin.com/in/nahuelgilcurbelo"
+      },
+      {
+        "network": "GitHub",
+        "username": "NahuelGil17",
+        "url": "https://github.com/NahuelGil17"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "woOw",
+      "position": "Developer JR",
+      "url": "https://woow.com.uy/",
+      "startDate": "2018",
+      "endDate": "2019",
+      "summary": "My first work experience in the world of programming.Where I developed in the Backend area with PHP andMySQL technologies. My role was to work on different tasks from our PO.",
+      "highlights": ["First work experience"]
+    },
+    {
+      "name": "Altimetrik",
+      "position": "Frontend Developer",
+      "url": "https://www.altimetrik.com/",
+      "startDate": "2019",
+      "endDate": "2020",
+      "summary": "Second work experience where I my change orientation. I went from Backend to Frontend. I started to gain more experience in JavaScript and related frameworks. My role together with my team was to develop and implement solutions in different projects.",
+      "highlights": ["Jump from JR to mid level"]
+    },
+    {
+      "name": "TaTa S.A",
+      "position": "Frontend Developer",
+      "url": "https://www.tata.com.uy/",
+      "startDate": "2020",
+      "endDate": "2022",
+      "summary": "Current place of work. Responsible for the programming,development and implementation of new projects. I started with a Fullstack role oriented to Backend where at6 months I joined the Frontend team to work exclusively on it.",
+      "highlights": [
+        "Learning backend technologies",
+        "I strengthened my skills with Angular"
+      ]
+    },
+    {
+      "name": "Dualboot",
+      "position": "Full Stack Developer",
+      "url": "https://dualbootpartners.com/",
+      "startDate": "2022",
+      "endDate": "2024",
+      "summary": "In a dual-boot environment, I learned to work in a large software factory where each project was a challenge, from which I gained substantial knowledge. During this phase, I had the opportunity to lead projects as the sole front-end developer, which was an enriching challenge. Furthermore, it allowed me to continue improving my skills with Angular.",
+      "highlights": [
+        "Lead projects",
+        "Learned to work in a large software factory"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": ["Awarded 'Volunteer of the Month'"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "ORT University",
+      "url": "https://www.ort.edu.uy/",
+      "area": "Engineering",
+      "studyType": "Programmer Analyst",
+      "startDate": "2018-01-01",
+      "endDate": "2022-01-01",
+      "score": "86",
+      "courses": ["Programmer Analyst"]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Advanced",
+      "keywords": ["Web development", "Frontend"]
+    },
+    {
+      "name": "CSS",
+      "level": "Advanced",
+      "keywords": ["Web development", "Frontend", "Diseño Responsive"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Advanced",
+      "keywords": ["Web development", "Frontend", "Backend", "Fullstack"]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Advanced",
+      "keywords": [
+        "Web development",
+        "Frontend",
+        "CSS Framework",
+        "Responsive design"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Advanced",
+      "keywords": [
+        "Web development",
+        "Frontend",
+        "Backend",
+        "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Mid",
+      "keywords": ["Web development", "Backend", "JavaScript", "Servidor"]
+    },
+    {
+      "name": "MySQL",
+      "level": "Advanced",
+      "keywords": ["Bases de Datos", "SQL", "Database", "Backend"]
+    },
+    {
+      "name": "Git",
+      "level": "Advanced",
+      "keywords": ["Version control", "Collaboration", "Source code"]
+    },
+    {
+      "name": "GitHub",
+      "level": "Advanced",
+      "keywords": ["Version control", "Collaboration", "Source code", "Git"]
+    },
+    {
+      "name": "Angular",
+      "level": "Advanced",
+      "keywords": [
+        "Web development",
+        "Frontend",
+        "Angular Framework",
+        "SSR",
+        "Material",
+        "NGXS",
+        "RxJS",
+        "SOLID"
+      ]
+    },
+    {
+      "name": "Nest JS",
+      "level": "Mid",
+      "keywords": [
+        "Web development",
+        "Backend",
+        "JavaScript Framework",
+        "Modules Oriented"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Advanced"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": ["Ferrets", "Unicorns"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Salud Connect",
+      "startDate": "2024-01-01",
+      "endDate": "2024-04-04",
+      "description": "Salud Connect is an application designed to assist both professionals and users in establishing connections. It offers a system where professionals from various health sectors can store information about their services and provides a real-time calendar (virtual agenda) to support the professional, among many other functionalities",
+      "highlights": [
+        "Freelance expirience",
+        "Lead Technical project",
+        "Fullstack role"
+      ],
+      "url": "https://salud-connect.web.app/intro"
+    }
+  ]
+}
