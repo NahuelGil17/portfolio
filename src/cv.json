@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Nahuel Gil",
-    "label": "Full-Stack developer with more than 4 years of experience",
+    "label": "Full-Stack developer with more than 6 years of experience",
     "image": "/me.webp",
     "email": "nahuelgil98@gmail.com",
     "phone": "(+598) 93 700 567",
@@ -32,8 +32,8 @@
       "name": "woOw",
       "position": "Developer JR",
       "url": "https://woow.com.uy/",
-      "startDate": "2018",
-      "endDate": "2019",
+      "startDate": "2018-01-01",
+      "endDate": "2019-01-01",
       "summary": "My first work experience in the world of programming.Where I developed in the Backend area with PHP andMySQL technologies. My role was to work on different tasks from our PO.",
       "highlights": ["First work experience"]
     },
@@ -41,8 +41,8 @@
       "name": "Altimetrik",
       "position": "Frontend Developer",
       "url": "https://www.altimetrik.com/",
-      "startDate": "2019",
-      "endDate": "2020",
+      "startDate": "2019-01-01",
+      "endDate": "2020-01-01",
       "summary": "Second work experience where I my change orientation. I went from Backend to Frontend. I started to gain more experience in JavaScript and related frameworks. My role together with my team was to develop and implement solutions in different projects.",
       "highlights": ["Jump from JR to mid level"]
     },
@@ -50,8 +50,8 @@
       "name": "TaTa S.A",
       "position": "Frontend Developer",
       "url": "https://www.tata.com.uy/",
-      "startDate": "2020",
-      "endDate": "2022",
+      "startDate": "2020-01-01",
+      "endDate": "2022-01-01",
       "summary": "Current place of work. Responsible for the programming,development and implementation of new projects. I started with a Fullstack role oriented to Backend where at6 months I joined the Frontend team to work exclusively on it.",
       "highlights": [
         "Learning backend technologies",
@@ -62,8 +62,8 @@
       "name": "Dualboot",
       "position": "Full Stack Developer",
       "url": "https://dualbootpartners.com/",
-      "startDate": "2022",
-      "endDate": "2024",
+      "startDate": "2022-01-01",
+      "endDate": "2024-01-01",
       "summary": "In a dual-boot environment, I learned to work in a large software factory where each project was a challenge, from which I gained substantial knowledge. During this phase, I had the opportunity to lead projects as the sole front-end developer, which was an enriching challenge. Furthermore, it allowed me to continue improving my skills with Angular.",
       "highlights": [
         "Lead projects",
@@ -184,9 +184,11 @@
         "Angular Framework",
         "SSR",
         "Material",
-        "NGXS",
+        "NgXs",
         "RxJS",
-        "SOLID"
+        "Clean Architecture",
+        "Firebase",
+        "Ionic"
       ]
     },
     {
@@ -197,6 +199,33 @@
         "Backend",
         "JavaScript Framework",
         "Modules Oriented"
+      ]
+    },
+    {
+      "name": "Firebase",
+      "level": "Mid",
+      "keywords": [
+        "Web development",
+        "Backend",
+        "Frontend",
+        "Google",
+        "Cloud",
+        "Firestore",
+        "Realtime Database",
+        "Authentication"
+      ]
+    },
+    {
+      "name": "Ionic",
+      "level": "Advanced",
+      "keywords": [
+        "Web development",
+        "Frontend",
+        "Mobile",
+        "Cross Platform",
+        "Angular",
+        "Cordova",
+        "PWA"
       ]
     }
   ],
@@ -224,14 +253,29 @@
   ],
   "projects": [
     {
+      "name": "Gym App",
+      "startDate": "2023-05-20",
+      "endDate": "2023-07-07",
+      "isActive": false,
+      "description": "Gym App is an application designed for small gyms with the purpose of providing a platform where users' routines can be displayed on screen. These routines will dynamically change depending on the time the user visits the gym.",
+      "highlights": [
+        "Freelance expirience",
+        "Fullstack role",
+        "Lead Technical project",
+        "Angular SSR"
+      ],
+      "url": ""
+    },
+    {
       "name": "Salud Connect",
       "startDate": "2024-01-01",
       "endDate": "2024-04-04",
+      "isActive": true,
       "description": "Salud Connect is an application designed to assist both professionals and users in establishing connections. It offers a system where professionals from various health sectors can store information about their services and provides a real-time calendar (virtual agenda) to support the professional, among many other functionalities",
       "highlights": [
         "Freelance expirience",
-        "Lead Technical project",
-        "Fullstack role"
+        "Fullstack role",
+        "Lead Technical project"
       ],
       "url": "https://salud-connect.web.app/intro"
     }

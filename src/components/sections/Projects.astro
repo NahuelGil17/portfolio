@@ -1,5 +1,110 @@
 ---
 import Section from "@/components/Section.astro";
+import { projects } from "@/cv.json";
 ---
 
-<Section title="Projects" />
+<Section title="Projects">
+  <ul>
+    {
+      projects.map((project) => (
+        <li>
+          <article>
+            <header>
+													<h3>
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={`See the project ${project.name}`}
+              >
+                {project.name}
+              </a>
+														{
+															project.isActive && <span>&bull;</span>
+														}
+														</h3>
+              <p>{project.description}</p>
+            </header>
+            <footer>
+            
+                {project.highlights.map((highlights) => (
+                  <span>{highlights}</span>
+                ))}
+              
+            </footer>
+          </article>
+        </li>
+      ))
+    }
+  </ul>
+</Section>
+
+<style>
+	ul {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 1rem;
+		margin-inline: -16px;
+	}
+
+	article {
+		border-radius: 10px;
+		border: 1px	solid #f2f2f2;
+		gap: 14px;
+		display: flex;
+		flex-direction: column;
+		padding: 16px;
+		height: 100%;
+
+	}
+
+	article header {
+		flex: 1;
+	}
+
+	article header h3 {
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+	}
+
+	article a {
+		text-decoration: none;
+		color: #000;
+	}
+
+	article p {
+		font-size: 0.75rem;
+		line-height: 1.2rem;
+		margin-bottom: 8px;
+	}
+
+	article h3 span {
+	color: rgb(0,188,30)
+	}
+
+	article a:hover {
+		text-decoration: underline;
+	}
+
+	footer {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px;
+		font-size: 0.6rem;
+	}
+
+	footer span {
+		border-radius: 6px;
+		background: #eee;
+		color: #444;
+		font-size: 0.8rem;
+		font-weight: 500;
+		padding: 0.2rem 0.6rem;
+		display: inline-flex;
+	}
+	footer span:hover {
+		background: #ddd;
+		transition: all 0.2s ease-in-out;
+		cursor: pointer;
+	}
+</style>
