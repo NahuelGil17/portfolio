@@ -69,6 +69,18 @@
         "Lead projects",
         "Learned to work in a large software factory"
       ]
+    },
+    {
+      "name": "Vangwe",
+      "position": "Full Stack Developer",
+      "url": "https://www.vangwe.com/",
+      "startDate": "2024-03-04",
+      "summary": "At Vangwe, I am part of a team that is responsible for the development of a platform that connects professionals with companies. I am in charge of the Frontend area, where I work with Angular and Tailwind. I also work with the Backend team, where I use Nest JS and Mongo",
+      "highlights": [
+        "Lead projects",
+        "Fintech",
+        "Fullstack role"
+      ]
     }
   ],
   "volunteer": [
@@ -227,6 +239,17 @@
         "Cordova",
         "PWA"
       ]
+    },
+    {
+      "name": "MongoDB",
+      "level": "Advanced",
+      "keywords": [
+        "Web development",
+        "Backend",
+        "Database",
+        "NoSQL",
+        "Document Oriented"
+      ]
     }
   ],
   "languages": [
@@ -278,6 +301,19 @@
         "Lead Technical project"
       ],
       "url": "https://salud-connect.web.app/intro"
-    }
+    },
+    {
+      "name": "DTF Central",
+      "startDate": "2024-02-15",
+      "endDate": "2024-06-25",
+      "isActive": true,
+      "description": "At DTF Central, I worked as a Fullstack Developer in a freelance capacity, leading technical projects from conception to completion. My responsibilities included both frontend and backend development, ensuring seamless integration and functionality across platforms. I collaborated with cross-functional teams to deliver high-quality solutions and played a key role in guiding the technical direction of the projects.",
+      "highlights": [
+        "Freelance experience",
+        "Fullstack role",
+        "Lead Technical project"
+      ],
+      "url": "https://central-dtf.com/home"
+    }    
   ]
 }
