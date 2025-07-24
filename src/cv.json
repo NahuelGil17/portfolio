@@ -2,7 +2,7 @@
   "basics": {
     "name": "Nahuel Gil",
     "label": "Full-Stack developer with more than 6 years of experience",
-    "image": "/me.webp",
+    "image": "/me.jpeg",
     "email": "nahuelgil98@gmail.com",
     "phone": "(+598) 93 700 567",
     "url": "https://johndoe.com",
@@ -35,7 +35,9 @@
       "startDate": "2018-01-01",
       "endDate": "2019-01-01",
       "summary": "My first work experience in the world of programming.Where I developed in the Backend area with PHP andMySQL technologies. My role was to work on different tasks from our PO.",
-      "highlights": ["First work experience"]
+      "highlights": [
+        "First work experience"
+      ]
     },
     {
       "name": "Altimetrik",
@@ -44,7 +46,9 @@
       "startDate": "2019-01-01",
       "endDate": "2020-01-01",
       "summary": "Second work experience where I my change orientation. I went from Backend to Frontend. I started to gain more experience in JavaScript and related frameworks. My role together with my team was to develop and implement solutions in different projects.",
-      "highlights": ["Jump from JR to mid level"]
+      "highlights": [
+        "Jump from JR to mid level"
+      ]
     },
     {
       "name": "TaTa S.A",
@@ -91,7 +95,9 @@
       "startDate": "2012-01-01",
       "endDate": "2013-01-01",
       "summary": "Description…",
-      "highlights": ["Awarded 'Volunteer of the Month'"]
+      "highlights": [
+        "Awarded 'Volunteer of the Month'"
+      ]
     }
   ],
   "education": [
@@ -103,7 +109,9 @@
       "startDate": "2018-01-01",
       "endDate": "2022-01-01",
       "score": "86",
-      "courses": ["Programmer Analyst"]
+      "courses": [
+        "Programmer Analyst"
+      ]
     }
   ],
   "awards": [
@@ -135,17 +143,29 @@
     {
       "name": "HTML",
       "level": "Advanced",
-      "keywords": ["Web development", "Frontend"]
+      "keywords": [
+        "Web development",
+        "Frontend"
+      ]
     },
     {
       "name": "CSS",
       "level": "Advanced",
-      "keywords": ["Web development", "Frontend", "Diseño Responsive"]
+      "keywords": [
+        "Web development",
+        "Frontend",
+        "Diseño Responsive"
+      ]
     },
     {
       "name": "JavaScript",
       "level": "Advanced",
-      "keywords": ["Web development", "Frontend", "Backend", "Fullstack"]
+      "keywords": [
+        "Web development",
+        "Frontend",
+        "Backend",
+        "Fullstack"
+      ]
     },
     {
       "name": "Tailwind",
@@ -170,22 +190,41 @@
     {
       "name": "Node",
       "level": "Mid",
-      "keywords": ["Web development", "Backend", "JavaScript", "Servidor"]
+      "keywords": [
+        "Web development",
+        "Backend",
+        "JavaScript",
+        "Servidor"
+      ]
     },
     {
       "name": "MySQL",
       "level": "Advanced",
-      "keywords": ["Bases de Datos", "SQL", "Database", "Backend"]
+      "keywords": [
+        "Bases de Datos",
+        "SQL",
+        "Database",
+        "Backend"
+      ]
     },
     {
       "name": "Git",
       "level": "Advanced",
-      "keywords": ["Version control", "Collaboration", "Source code"]
+      "keywords": [
+        "Version control",
+        "Collaboration",
+        "Source code"
+      ]
     },
     {
       "name": "GitHub",
       "level": "Advanced",
-      "keywords": ["Version control", "Collaboration", "Source code", "Git"]
+      "keywords": [
+        "Version control",
+        "Collaboration",
+        "Source code",
+        "Git"
+      ]
     },
     {
       "name": "Angular",
@@ -265,7 +304,10 @@
   "interests": [
     {
       "name": "Wildlife",
-      "keywords": ["Ferrets", "Unicorns"]
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
     }
   ],
   "references": [
@@ -276,10 +318,10 @@
   ],
   "projects": [
     {
-      "name": "Gym App",
+      "name": "Plus Fit",
       "startDate": "2023-05-20",
       "endDate": "2023-07-07",
-      "isActive": false,
+      "isActive": true,
       "description": "Gym App is an application designed for small gyms with the purpose of providing a platform where users' routines can be displayed on screen. These routines will dynamically change depending on the time the user visits the gym.",
       "highlights": [
         "Freelance expirience",
@@ -287,7 +329,7 @@
         "Lead Technical project",
         "Angular SSR"
       ],
-      "url": ""
+      "url": "https://plusfit.com.uy/"
     },
     {
       "name": "Salud Connect",
@@ -314,6 +356,45 @@
         "Lead Technical project"
       ],
       "url": "https://central-dtf.com/home"
-    }    
+    },
+    {
+      "name": "Workwisse",
+      "startDate": "2024-07-01",
+      "endDate": "2024-09-01",
+      "isActive": true,
+      "description": "A platform that provides verified, anonymous employee reviews to help job seekers make informed career decisions. It offers insights into company culture, salaries, and growth opportunities, promoting transparency in the workplace.",
+      "highlights": [
+        "Freelance experience",
+        "Fullstack role",
+        "Lead Technical project"
+      ],
+      "url": "https://app-workwisse.vercel.app/"
+    },
+    {
+      "name": "Workwisse",
+      "startDate": "2024-07-01",
+      "endDate": "2024-09-01",
+      "isActive": true,
+      "description": "A platform that provides verified, anonymous employee reviews to help job seekers make informed career decisions. It offers insights into company culture, salaries, and growth opportunities, promoting transparency in the workplace.",
+      "highlights": [
+        "Freelance experience",
+        "Fullstack role",
+        "Lead Technical project"
+      ],
+      "url": "https://app-workwisse.vercel.app/"
+    },
+    {
+      "name": "Rentalomio",
+      "startDate": "2023-01-01",
+      "endDate": null,
+      "isActive": true,
+      "description": "A multi-tenant e-commerce platform for rental businesses. It provides a customizable storefront for companies to manage their product inventory, bookings, and process payments.",
+      "highlights": [
+        "Developed a multi-tenant architecture to support multiple businesses.",
+        "Implemented a booking and inventory management system.",
+        "Integrated payment gateways to process online payments."
+      ],
+      "url": "https://rental-store.rentalomio.com/"
+    }
   ]
 }
