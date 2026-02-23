@@ -29,37 +29,15 @@
   },
   "work": [
     {
-      "name": "woOw",
-      "position": "Developer JR",
-      "url": "https://woow.com.uy/",
-      "startDate": "2018-01-01",
-      "endDate": "2019-01-01",
-      "summary": "My first work experience in the world of programming.Where I developed in the Backend area with PHP andMySQL technologies. My role was to work on different tasks from our PO.",
+      "name": "Vangwe",
+      "position": "Full Stack Developer",
+      "url": "https://www.vangwe.com/",
+      "startDate": "2024-03-04",
+      "summary": "At Vangwe, I am part of a team that is responsible for the development of a platform that connects professionals with companies. I am in charge of the Frontend area, where I work with Angular and Tailwind. I also work with the Backend team, where I use Nest JS and Mongo",
       "highlights": [
-        "First work experience"
-      ]
-    },
-    {
-      "name": "Altimetrik",
-      "position": "Frontend Developer",
-      "url": "https://www.altimetrik.com/",
-      "startDate": "2019-01-01",
-      "endDate": "2020-01-01",
-      "summary": "Second work experience where I my change orientation. I went from Backend to Frontend. I started to gain more experience in JavaScript and related frameworks. My role together with my team was to develop and implement solutions in different projects.",
-      "highlights": [
-        "Jump from JR to mid level"
-      ]
-    },
-    {
-      "name": "TaTa S.A",
-      "position": "Frontend Developer",
-      "url": "https://www.tata.com.uy/",
-      "startDate": "2020-01-01",
-      "endDate": "2022-01-01",
-      "summary": "Responsible for the programming,development and implementation of new projects. I started with a Fullstack role oriented to Backend where at 6 months I joined the Frontend team to work exclusively on it.",
-      "highlights": [
-        "Learning backend technologies",
-        "I strengthened my skills with Angular"
+        "Lead projects",
+        "Fintech",
+        "Fullstack role"
       ]
     },
     {
@@ -75,15 +53,37 @@
       ]
     },
     {
-      "name": "Vangwe",
-      "position": "Full Stack Developer",
-      "url": "https://www.vangwe.com/",
-      "startDate": "2024-03-04",
-      "summary": "At Vangwe, I am part of a team that is responsible for the development of a platform that connects professionals with companies. I am in charge of the Frontend area, where I work with Angular and Tailwind. I also work with the Backend team, where I use Nest JS and Mongo",
+      "name": "TaTa S.A",
+      "position": "Frontend Developer",
+      "url": "https://www.tata.com.uy/",
+      "startDate": "2020-01-01",
+      "endDate": "2022-01-01",
+      "summary": "Responsible for the programming,development and implementation of new projects. I started with a Fullstack role oriented to Backend where at 6 months I joined the Frontend team to work exclusively on it.",
       "highlights": [
-        "Lead projects",
-        "Fintech",
-        "Fullstack role"
+        "Learning backend technologies",
+        "I strengthened my skills with Angular"
+      ]
+    },
+    {
+      "name": "Altimetrik",
+      "position": "Frontend Developer",
+      "url": "https://www.altimetrik.com/",
+      "startDate": "2019-01-01",
+      "endDate": "2020-01-01",
+      "summary": "Second work experience where I change my orientation. I went from Backend to Frontend. I started to gain more experience in JavaScript and related frameworks. My role together with my team was to develop and implement solutions in different projects.",
+      "highlights": [
+        "Jump from JR to mid level"
+      ]
+    },
+    {
+      "name": "woOw",
+      "position": "Developer JR",
+      "url": "https://woow.com.uy/",
+      "startDate": "2018-01-01",
+      "endDate": "2019-01-01",
+      "summary": "My first work experience in the world of programming.Where I developed in the Backend area with PHP andMySQL technologies. My role was to work on different tasks from our PO.",
+      "highlights": [
+        "First work experience"
       ]
     }
   ],
