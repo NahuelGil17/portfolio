@@ -289,6 +289,15 @@
         "NoSQL",
         "Document Oriented"
       ]
+    },
+    {
+      "name": "Flutter",
+      "level": "Advanced",
+      "keywords": [
+        "Mobile",
+        "Cross Platform",
+        "Frontend"
+      ]
     }
   ],
   "languages": [
