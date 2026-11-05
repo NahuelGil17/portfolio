@@ -2,98 +2,105 @@
 import Section from "@/components/Section.astro";
 
 import { work } from "@/cv.json";
+
+const formatYear = (date: string) => new Date(date).getFullYear();
 ---
 
 <Section title="Experience">
   <ul>
     {
-      work.map(
-        ({ name, startDate, endDate, position, summary, highlights }) => {
-            const startYear = new Date(startDate).getFullYear();
-            const endYear = endDate != null ? new Date(endDate).getFullYear() :  "Present";
-            const years = `${startYear} - ${endYear}`;
-          return (
-            <li >
-                <article>
-                    <header>
-                        <div>
-                            <h3>{name}</h3>
-                            <h4>{position}</h4>
-                        </div>
-                        <time>
-                            <p>{years}</p>
-                            </time>
-                    </header>
-                    <footer>
-                        <p>{summary}</p>
-                        <div class="highlights">
-                            {
-                                highlights.map(
-                                    (highlight) => {
-                                        return (
-                                            <span>{highlight}</span>
-                                        )
-                                    }
-                                )
-                            }
-                          </div>
-                    </footer>
-                </article>
-            </li>
-          );
-        }
-      )
+      work.map(({ name, url, startDate, endDate, position, summary, highlights }) => {
+        const startYear = formatYear(startDate);
+        const endYear = endDate != null ? formatYear(endDate) : "Present";
+        return (
+          <li>
+            <article>
+              <header>
+                <div>
+                  <h3>
+                    {url ? (
+                      <a href={url} target="_blank" rel="noopener noreferrer">
+                        {name}
+                      </a>
+                    ) : (
+                      name
+                    )}
+                  </h3>
+                  <p class="position">{position}</p>
+                </div>
+                <time datetime={startDate}>
+                  {startYear} – {endYear}
+                </time>
+              </header>
+              <p>{summary}</p>
+              <ul class="highlights" aria-label={`Highlights at ${name}`}>
+                {highlights.map((highlight) => (
+                  <li class="tag">{highlight}</li>
+                ))}
+              </ul>
+            </article>
+          </li>
+        );
+      })
     }
   </ul>
 </Section>
 
 <style>
-    ul {
-       display: flex;
-       flex-direction: column;
-       gap:32px;
-    }
-    article h3 {
-        font-weight: 650;
-        color: #111
-    }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
 
-    article h4 {
-        color: #222;
-        font-weight: 500;
-    }
+  h3 {
+    font-size: 1.05rem;
+    font-weight: 650;
+    line-height: 1.3;
+  }
 
+  h3 a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+  }
+
+  .position {
+    color: var(--text);
+    font-weight: 500;
+    font-size: 0.92rem;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+
+  time {
+    flex-shrink: 0;
+    color: var(--text-subtle);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .highlights {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  @media (max-width: 560px) {
     header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 4px;
+      flex-direction: column;
+      gap: 4px;
     }
-    time p {
-        color: #555
-        font-size: .85rem;
-        font-weight: 500;
+    time {
+      order: -1;
     }
-    .highlights {
-        display: flex;
-        flex-direction: column;
-        margin-top:8px;
-        gap: 8px;
-        
-    }
-    .highlights span {
-        flex-wrap: wrap;
-        border-radius: 6px;
-        max-width: fit-content;
-        background: #eee;
-        color: #444;
-        font-size: 0.8rem;
-        font-weight: 500;
-        padding: 0.2rem 0.6rem;
-    }
-    .highlights span:hover {
-  
-		background: #ddd;
-		transition: all 0.2s ease-in-out;
-    }
+  }
 </style>
