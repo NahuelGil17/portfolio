@@ -402,10 +402,12 @@
       "endDate": null,
       "isActive": true,
       "description": "Mobile app for electric vehicle charging in Uruguay. Users can find charging stations on a map, start charges by scanning a QR code, and manage payments and their charging history.",
-      "highlights": [
+      "roles": [
+        "Senior Software Developer"
+      ],
+      "keywords": [
         "Flutter",
-        "Mobile",
-        "EV charging",
+        "Dart",
         "Google Maps",
         "Firebase"
       ]
@@ -416,11 +418,14 @@
       "endDate": null,
       "isActive": true,
       "description": "Household finance app for two-person homes: tracks shared and personal expenses, each member's contribution to a common fund, and a monthly close with frozen snapshots and per-month payment checklists.",
-      "highlights": [
+      "roles": [
         "Personal project",
-        "Next.js 16",
+        "Fullstack"
+      ],
+      "keywords": [
+        "Next.js",
         "Supabase",
-        "Tailwind CSS v4",
+        "Tailwind CSS",
         "Vitest"
       ]
     },
@@ -430,13 +435,15 @@
       "endDate": "2023-07-07",
       "isActive": true,
       "description": "Gym App is an application designed for small gyms with the purpose of providing a platform where users' routines can be displayed on screen. These routines will dynamically change depending on the time the user visits the gym.",
-      "highlights": [
-        "Freelance experience",
-        "Fullstack role",
-        "Lead Technical project",
-        "Angular SSR"
+      "url": "https://plusfit.uy/",
+      "roles": [
+        "Freelance",
+        "Fullstack",
+        "Technical lead"
       ],
-      "url": "https://plusfit.uy/"
+      "keywords": [
+        "Angular SSR"
+      ]
     },
     {
       "name": "Salud Connect",
@@ -444,12 +451,13 @@
       "endDate": "2024-04-04",
       "isActive": true,
       "description": "Salud Connect is an application designed to assist both professionals and users in establishing connections. It offers a system where professionals from various health sectors can store information about their services and provides a real-time calendar (virtual agenda) to support the professional, among many other functionalities",
-      "highlights": [
-        "Freelance experience",
-        "Fullstack role",
-        "Lead Technical project"
+      "url": "https://salud-connect.web.app/intro",
+      "roles": [
+        "Freelance",
+        "Fullstack",
+        "Technical lead"
       ],
-      "url": "https://salud-connect.web.app/intro"
+      "keywords": []
     },
     {
       "name": "DTF Central",
@@ -457,12 +465,13 @@
       "endDate": "2024-06-25",
       "isActive": true,
       "description": "At DTF Central, I worked as a Fullstack Developer in a freelance capacity, leading technical projects from conception to completion. My responsibilities included both frontend and backend development, ensuring seamless integration and functionality across platforms. I collaborated with cross-functional teams to deliver high-quality solutions and played a key role in guiding the technical direction of the projects.",
-      "highlights": [
-        "Freelance experience",
-        "Fullstack role",
-        "Lead Technical project"
+      "url": "https://central-dtf.com/home",
+      "roles": [
+        "Freelance",
+        "Fullstack",
+        "Technical lead"
       ],
-      "url": "https://central-dtf.com/home"
+      "keywords": []
     },
     {
       "name": "Workwisse",
@@ -470,12 +479,13 @@
       "endDate": "2024-09-01",
       "isActive": true,
       "description": "A platform that provides verified, anonymous employee reviews to help job seekers make informed career decisions. It offers insights into company culture, salaries, and growth opportunities, promoting transparency in the workplace.",
-      "highlights": [
-        "Freelance experience",
-        "Fullstack role",
-        "Lead Technical project"
+      "url": "https://app-workwisse.vercel.app/",
+      "roles": [
+        "Freelance",
+        "Fullstack",
+        "Technical lead"
       ],
-      "url": "https://app-workwisse.vercel.app/"
+      "keywords": []
     },
     {
       "name": "Rentalomio",
@@ -483,12 +493,14 @@
       "endDate": null,
       "isActive": true,
       "description": "A multi-tenant e-commerce platform for rental businesses. It provides a customizable storefront for companies to manage their product inventory, bookings, and process payments.",
+      "url": "https://rental-store.rentalomio.com/",
+      "roles": [],
+      "keywords": [],
       "highlights": [
         "Developed a multi-tenant architecture to support multiple businesses.",
         "Implemented a booking and inventory management system.",
         "Integrated payment gateways to process online payments."
-      ],
-      "url": "https://rental-store.rentalomio.com/"
+      ]
     }
   ]
 }
