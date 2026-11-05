@@ -8,8 +8,8 @@ import { projects } from "@/cv.json";
     {
       projects.map((project) => {
         const highlights: string[] = ("highlights" in project && project.highlights) || [];
-        const startYear = new Date(project.startDate).getFullYear();
-        const endYear = project.endDate ? new Date(project.endDate).getFullYear() : "Present";
+        const startYear = new Date(project.startDate).getUTCFullYear();
+        const endYear = project.endDate ? new Date(project.endDate).getUTCFullYear() : "Present";
         const period = startYear === endYear ? `${startYear}` : `${startYear} – ${endYear}`;
         return (
           <li>

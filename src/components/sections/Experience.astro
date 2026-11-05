@@ -3,7 +3,7 @@ import Section from "@/components/Section.astro";
 
 import { work } from "@/cv.json";
 
-const formatYear = (date: string) => new Date(date).getFullYear();
+const formatYear = (date: string) => new Date(date).getUTCFullYear();
 ---
 
 <Section title="Experience">
