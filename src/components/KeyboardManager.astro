@@ -43,9 +43,6 @@ const profilesInfo = profiles.map(({ network, url }) => {
 });
 ---
 
-<footer class="no-print">
-  Press <kbd>Ctrl</kbd> + <kbd>K</kbd> to open the command menu
-</footer>
 <ninja-keys data-info={JSON.stringify(profilesInfo)} hideBreadcrumbs
 ></ninja-keys>
 
@@ -54,10 +51,19 @@ const profilesInfo = profiles.map(({ network, url }) => {
 
   const ninja = document.querySelector("ninja-keys");
   if (ninja !== null) {
+    const root = document.documentElement;
     const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const syncTheme = () => ninja.classList.toggle("dark", darkQuery.matches);
+    const syncTheme = () => {
+      const dark = root.dataset.theme ? root.dataset.theme === "dark" : darkQuery.matches;
+      ninja.classList.toggle("dark", dark);
+    };
     syncTheme();
     darkQuery.addEventListener("change", syncTheme);
+    new MutationObserver(syncTheme).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+
+    document.querySelectorAll("[data-command-menu]").forEach((button) => {
+      button.addEventListener("click", () => (ninja as any).open());
+    });
 
     const info = ninja.getAttribute("data-info") ?? null;
     const parsedInfo = info ? JSON.parse(info) : [];
@@ -85,46 +91,13 @@ const profilesInfo = profiles.map(({ network, url }) => {
 </script>
 
 <style>
-  footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding-block: 10px;
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    background: color-mix(in srgb, var(--bg) 88%, transparent);
-    backdrop-filter: blur(8px);
-    border-top: 1px solid var(--border);
-  }
-
-  kbd {
-    display: inline-block;
-    margin: 0 2px;
-    padding: 1px 6px;
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    color: var(--text);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-bottom-width: 2px;
-    border-radius: 4px;
-  }
-
   ninja-keys {
     --ninja-accent-color: var(--accent);
     --ninja-font-family: var(--font-sans);
   }
 
-  @media (pointer: coarse) {
-    footer {
-      display: none;
-    }
-  }
-
   @media print {
-    ninja-keys,
-    .no-print {
+    ninja-keys {
       display: none;
     }
   }

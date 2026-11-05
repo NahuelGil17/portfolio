@@ -7,6 +7,9 @@ import LinkedIn from "@/icons/LinkedIn.astro";
 import GitHub from "@/icons/GitHub.astro";
 import WorldMap from "@/icons/WorldMap.astro";
 import Download from "@/icons/Download.astro";
+import Moon from "@/icons/Moon.astro";
+import Sun from "@/icons/Sun.astro";
+import Command from "@/icons/Command.astro";
 
 const { name, label, image, location, profiles, phone, email } = basics;
 const { city, region } = location;
@@ -57,6 +60,21 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
             );
           })
         }
+        <span class="divider" aria-hidden="true"></span>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Use dark theme" title="Toggle theme">
+          <span class="moon"><Moon /></span>
+          <span class="sun"><Sun /></span>
+        </button>
+        <button
+          type="button"
+          class="keyboard-only"
+          data-command-menu
+          aria-label="Open command menu"
+          aria-keyshortcuts="Control+K"
+          title="Command menu (Ctrl + K)"
+        >
+          <Command />
+        </button>
       </footer>
       <div class="actions no-print">
         {
@@ -130,7 +148,39 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     margin-top: 8px;
   }
 
-  footer a {
+  footer button {
+    padding: 0;
+    font: inherit;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .divider {
+    align-self: center;
+    width: 1px;
+    height: 20px;
+    margin-inline: 4px;
+    background: var(--border);
+  }
+
+  .theme-toggle .sun,
+  .theme-toggle[aria-pressed="true"] .moon {
+    display: none;
+  }
+
+  .theme-toggle[aria-pressed="true"] .sun,
+  .theme-toggle .moon {
+    display: inline-flex;
+  }
+
+  @media (pointer: coarse) {
+    .keyboard-only {
+      display: none !important;
+    }
+  }
+
+  footer a,
+  footer button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -141,6 +191,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     border-radius: var(--radius);
     transition: color 0.2s var(--ease-out), background-color 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
   }
+  footer button:hover,
   footer a:hover {
     color: var(--text-strong);
     background-color: var(--surface);
@@ -221,4 +272,31 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
   document.querySelectorAll<HTMLButtonElement>("[data-print]").forEach((button) => {
     button.addEventListener("click", () => window.print());
   });
+
+  const root = document.documentElement;
+  const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  const isDark = () =>
+    root.dataset.theme ? root.dataset.theme === "dark" : darkQuery.matches;
+
+  const syncToggles = () => {
+    const dark = isDark();
+    document.querySelectorAll<HTMLButtonElement>("[data-theme-toggle]").forEach((toggle) => {
+      toggle.setAttribute("aria-pressed", String(dark));
+      toggle.setAttribute("aria-label", dark ? "Use light theme" : "Use dark theme");
+    });
+  };
+
+  document.querySelectorAll<HTMLButtonElement>("[data-theme-toggle]").forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const next = isDark() ? "light" : "dark";
+      root.dataset.theme = next;
+      try {
+        localStorage.setItem("theme", next);
+      } catch {}
+      syncToggles();
+    });
+  });
+
+  darkQuery.addEventListener("change", syncToggles);
+  syncToggles();
 </script>

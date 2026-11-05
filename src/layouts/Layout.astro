@@ -30,6 +30,14 @@ const imageUrl = image ? new URL(image, Astro.site).href : undefined;
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
 		{imageUrl && <meta name="twitter:image" content={imageUrl} />}
+		<script is:inline>
+			try {
+				const stored = localStorage.getItem("theme");
+				if (stored === "light" || stored === "dark") {
+					document.documentElement.dataset.theme = stored;
+				}
+			} catch {}
+		</script>
 	</head>
 	<body>
 		<slot />
@@ -57,10 +65,12 @@ const imageUrl = image ? new URL(image, Astro.site).href : undefined;
 		--radius: 8px;
 		--measure: 700px;
 		--ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+		color-scheme: light;
 	}
 
+	/* Dark tokens: follow the OS unless the visitor picked a theme (data-theme on <html>). */
 	@media (prefers-color-scheme: dark) {
-		:root {
+		:root:not([data-theme="light"]) {
 			--bg: #0e100e;
 			--surface: #1a1d1a;
 			--surface-hover: #242824;
@@ -74,7 +84,25 @@ const imageUrl = image ? new URL(image, Astro.site).href : undefined;
 			--accent-hover: #6ee7a0;
 			--accent-contrast: #062b13;
 			--focus: #4ade80;
+			color-scheme: dark;
 		}
+	}
+
+	:root[data-theme="dark"] {
+		--bg: #0e100e;
+		--surface: #1a1d1a;
+		--surface-hover: #242824;
+		--border: #2a2e2a;
+		--text: #e8ebe8;
+		--text-strong: #ffffff;
+		--text-muted: #b3b9b3;
+		--text-subtle: #9aa19a;
+		--accent: #4ade80;
+		--accent-soft: #163a22;
+		--accent-hover: #6ee7a0;
+		--accent-contrast: #062b13;
+		--focus: #4ade80;
+		color-scheme: dark;
 	}
 
 	*, *::before, *::after {
