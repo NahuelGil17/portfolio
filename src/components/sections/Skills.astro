@@ -2,24 +2,87 @@
 import Section from "@/components/Section.astro";
 
 import { skills } from "@/cv.json";
+
+const GROUPS: Record<string, string[]> = {
+  Frontend: ["Angular", "TypeScript", "JavaScript", "React", "Next.js", "HTML", "CSS", "Tailwind"],
+  Mobile: ["Flutter", "Dart", "Ionic"],
+  Backend: ["Nest JS", "Node", "Firebase", "Supabase"],
+  Databases: ["MongoDB", "PostgreSQL", "MySQL"],
+  Tooling: ["Git", "GitHub", "AI-assisted development"],
+};
+
+const grouped = Object.entries(GROUPS)
+  .map(([group, names]) => ({
+    group,
+    items: names.filter((name) => skills.some((skill) => skill.name === name)),
+  }))
+  .filter(({ items }) => items.length > 0);
+
+const groupedNames = new Set(Object.values(GROUPS).flat());
+const others = skills.map(({ name }) => name).filter((name) => !groupedNames.has(name));
+if (others.length > 0) grouped.push({ group: "Other", items: others });
 ---
 
 <Section title="Skills">
-  <ul>
-    {skills.map(({ name }) => <li class="tag">{name}</li>)}
-  </ul>
+  <dl>
+    {
+      grouped.map(({ group, items }) => (
+        <div class="row">
+          <dt>{group}</dt>
+          <dd>
+            <ul>
+              {items.map((name) => (
+                <li class="tag">{name}</li>
+              ))}
+            </ul>
+          </dd>
+        </div>
+      ))
+    }
+  </dl>
 </Section>
 
 <style>
+  dl {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  dt {
+    color: var(--text-subtle);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+  }
+
+  dd {
+    margin: 0;
+  }
+
   ul {
     display: flex;
-    gap: 8px;
+    gap: 6px;
     flex-wrap: wrap;
   }
 
   li {
     font-size: 0.85rem;
     color: var(--text);
-    padding: 0.3rem 0.7rem;
+    padding: 0.25rem 0.65rem;
+  }
+
+  @media (max-width: 560px) {
+    .row {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
   }
 </style>
