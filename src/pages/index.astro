@@ -9,10 +9,14 @@ import Projects from '@/components/sections/Projects.astro';
 import Skills from '@/components/sections/Skills.astro';
 import KeyboardManager from '@/components/KeyboardManager.astro';
 import { basics } from '@/cv.json';
-const { name, label } = basics;
+const { name, label, image } = basics;
 ---
 
-<Layout title={`${name} – ${label}`} description={`${name}: ${label}. Experience, projects and skills.`}>
+<Layout
+	title={`${name} – ${label}`}
+	description={`${name}: ${label}. Experience, projects and skills.`}
+	image={image}
+>
 	<main>
 		<Hero />
 		<About />
