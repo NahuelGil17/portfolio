@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Nahuel Gil",
-    "label": "Full-Stack developer with more than 6 years of experience",
+    "label": "Full-Stack developer with more than 8 years of experience",
     "image": "/me.jpeg",
     "email": "nahuelgil98@gmail.com",
     "phone": "(+598) 93 700 567",
     "url": "https://johndoe.com",
-    "summary": "I am an Analyst-Programmer graduated at ORT University. I consider myself an enterprising person with ease to learn, to carry out  tasks. My goal is  to  cultivate and maximize my skills within and outside the Company,how to take advantage of the study and thus progress as a developer",
+    "summary": "Senior Software Developer with more than 8 years of experience building web and mobile products, currently working in the Electric Mobility area at UTE. Analyst-Programmer graduated from ORT University. I have worked across the stack with Angular, NestJS, MongoDB and Flutter, and led several freelance projects end to end, from technical design to delivery. I enjoy learning fast, owning problems, and turning complex requirements into products that are simple to use.",
     "location": {
       "address": "",
       "postalCode": "15100",
@@ -29,6 +29,19 @@
   },
   "work": [
     {
+      "name": "UTE",
+      "position": "Senior Software Developer",
+      "url": "https://portal.ute.com.uy/",
+      "startDate": "2026-10-05",
+      "summary": "Senior Software Developer in UTE's Electric Mobility area, building and evolving UTE Mueve, the mobile app Uruguayans use to find charging stations, charge their electric vehicles and manage their payments.",
+      "highlights": [
+        "Electric mobility",
+        "Senior role",
+        "Flutter",
+        "Mobile"
+      ]
+    },
+    {
       "name": "Vangwe",
       "position": "Full Stack Developer",
       "url": "https://www.vangwe.com/",
@@ -38,7 +51,8 @@
         "Lead projects",
         "Fintech",
         "Fullstack role"
-      ]
+      ],
+      "endDate": "2026-10-04"
     },
     {
       "name": "Dualboot",
@@ -298,6 +312,62 @@
         "Cross Platform",
         "Frontend"
       ]
+    },
+    {
+      "name": "Dart",
+      "level": "Advanced",
+      "keywords": [
+        "Mobile",
+        "Flutter",
+        "Cross Platform"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Mid",
+      "keywords": [
+        "Web development",
+        "Frontend",
+        "JavaScript Library"
+      ]
+    },
+    {
+      "name": "Next.js",
+      "level": "Mid",
+      "keywords": [
+        "Web development",
+        "Fullstack",
+        "React Framework",
+        "Server Actions"
+      ]
+    },
+    {
+      "name": "Supabase",
+      "level": "Mid",
+      "keywords": [
+        "Backend",
+        "PostgreSQL",
+        "Authentication",
+        "Row Level Security"
+      ]
+    },
+    {
+      "name": "PostgreSQL",
+      "level": "Mid",
+      "keywords": [
+        "Database",
+        "SQL",
+        "Backend"
+      ]
+    },
+    {
+      "name": "AI-assisted development",
+      "level": "Advanced",
+      "keywords": [
+        "Claude Code",
+        "AI agents",
+        "Developer productivity"
+      ]
     }
   ],
   "languages": [
@@ -327,13 +397,41 @@
   ],
   "projects": [
     {
+      "name": "UTE Mueve",
+      "startDate": "2026-10-05",
+      "endDate": null,
+      "isActive": true,
+      "description": "Mobile app for electric vehicle charging in Uruguay. Users can find charging stations on a map, start charges by scanning a QR code, and manage payments and their charging history.",
+      "highlights": [
+        "Flutter",
+        "Mobile",
+        "EV charging",
+        "Google Maps",
+        "Firebase"
+      ]
+    },
+    {
+      "name": "Chumi Finance",
+      "startDate": "2026-10-01",
+      "endDate": null,
+      "isActive": true,
+      "description": "Household finance app for two-person homes: tracks shared and personal expenses, each member's contribution to a common fund, and a monthly close with frozen snapshots and per-month payment checklists.",
+      "highlights": [
+        "Personal project",
+        "Next.js 16",
+        "Supabase",
+        "Tailwind CSS v4",
+        "Vitest"
+      ]
+    },
+    {
       "name": "Plus Fit",
       "startDate": "2023-05-20",
       "endDate": "2023-07-07",
       "isActive": true,
       "description": "Gym App is an application designed for small gyms with the purpose of providing a platform where users' routines can be displayed on screen. These routines will dynamically change depending on the time the user visits the gym.",
       "highlights": [
-        "Freelance expirience",
+        "Freelance experience",
         "Fullstack role",
         "Lead Technical project",
         "Angular SSR"
@@ -347,7 +445,7 @@
       "isActive": true,
       "description": "Salud Connect is an application designed to assist both professionals and users in establishing connections. It offers a system where professionals from various health sectors can store information about their services and provides a real-time calendar (virtual agenda) to support the professional, among many other functionalities",
       "highlights": [
-        "Freelance expirience",
+        "Freelance experience",
         "Fullstack role",
         "Lead Technical project"
       ],
@@ -365,19 +463,6 @@
         "Lead Technical project"
       ],
       "url": "https://central-dtf.com/home"
-    },
-    {
-      "name": "Workwisse",
-      "startDate": "2024-07-01",
-      "endDate": "2024-09-01",
-      "isActive": true,
-      "description": "A platform that provides verified, anonymous employee reviews to help job seekers make informed career decisions. It offers insights into company culture, salaries, and growth opportunities, promoting transparency in the workplace.",
-      "highlights": [
-        "Freelance experience",
-        "Fullstack role",
-        "Lead Technical project"
-      ],
-      "url": "https://app-workwisse.vercel.app/"
     },
     {
       "name": "Workwisse",

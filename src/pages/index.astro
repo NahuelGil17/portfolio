@@ -1,6 +1,5 @@
 ---
 import About from '@/components/sections/About.astro';
-import Education from '@/components/sections/Education.astro';
 import Experience from '@/components/sections/Experience.astro';
 import Hero from '@/components/sections/Hero.astro';
 import Layout from '@/layouts/Layout.astro';
@@ -11,22 +10,27 @@ import { basics } from '@/cv.json';
 const { name, label } = basics;
 ---
 
-<Layout title={`${name} Portfolio - ${label}`}>
+<Layout title={`${name} – ${label}`} description={`${name}: ${label}. Experience, projects and skills.`}>
 	<main>
 		<Hero />
 		<About />
-		<Experience/>
-		<!-- <Education/> -->
-		<Projects/>
-		<Skills/>
+		<Experience />
+		<Projects />
+		<Skills />
 	</main>
 	<KeyboardManager />
 </Layout>
 
 <style>
-	main{
-		padding: 4rem;
+	main {
+		width: 100%;
 		margin: auto;
-		width:100%
+		padding: clamp(32px, 8vw, 72px) 20px 96px;
+	}
+
+	@media print {
+		main {
+			padding: 0;
+		}
 	}
 </style>

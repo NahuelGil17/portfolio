@@ -44,7 +44,7 @@ const profilesInfo = profiles.map(({ network, url }) => {
 ---
 
 <footer class="no-print">
-  Press <kbd>ctrl</kbd> + <kbd>k</kbd> to open the keyboard manager.
+  Press <kbd>Ctrl</kbd> + <kbd>K</kbd> to open the command menu
 </footer>
 <ninja-keys data-info={JSON.stringify(profilesInfo)} hideBreadcrumbs
 ></ninja-keys>
@@ -54,6 +54,11 @@ const profilesInfo = profiles.map(({ network, url }) => {
 
   const ninja = document.querySelector("ninja-keys");
   if (ninja !== null) {
+    const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const syncTheme = () => ninja.classList.toggle("dark", darkQuery.matches);
+    syncTheme();
+    darkQuery.addEventListener("change", syncTheme);
+
     const info = ninja.getAttribute("data-info") ?? null;
     const parsedInfo = info ? JSON.parse(info) : [];
     const data = parsedInfo.map((item: any) => {
@@ -80,52 +85,47 @@ const profilesInfo = profiles.map(({ network, url }) => {
 </script>
 
 <style>
-  @media print {
-    ninja-keys {
-      display: none;
-    }
-  }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
   footer {
-    background: #ddd;
-    border-top: 1px solid #eee;
     position: fixed;
-    bottom: 0px;
+    bottom: 0;
     width: 100%;
-    padding-block: 8px;
+    padding-block: 10px;
     text-align: center;
-
-    view-timeline-name: --revealing;
-    view-timeline-axis: block;
-
-    animation: linear 0.3s fadeIn;
-    animation-timeline: --revealing;
-    animation-range: entry 100% cover 10%;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid var(--border);
   }
 
   kbd {
-    background: #f5f5f5;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    padding: 2px 5px;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-    font-size: 11px;
-    color: #333;
-    text-shadow: 0 1px 0 #fff;
     display: inline-block;
     margin: 0 2px;
+    padding: 1px 6px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-bottom-width: 2px;
+    border-radius: 4px;
   }
 
- @media print {
+  ninja-keys {
+    --ninja-accent-color: var(--accent);
+    --ninja-font-family: var(--font-sans);
+  }
+
+  @media (pointer: coarse) {
+    footer {
+      display: none;
+    }
+  }
+
+  @media print {
+    ninja-keys,
     .no-print {
       display: none;
     }
- }
+  }
 </style>
