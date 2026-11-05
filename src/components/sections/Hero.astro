@@ -6,6 +6,7 @@ import Phone from "@/icons/Phone.astro";
 import LinkedIn from "@/icons/LinkedIn.astro";
 import GitHub from "@/icons/GitHub.astro";
 import WorldMap from "@/icons/WorldMap.astro";
+import Download from "@/icons/Download.astro";
 
 const { name, label, image, location, profiles, phone, email } = basics;
 const { city, region } = location;
@@ -34,13 +35,6 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
       </footer>
       <footer class="no-print">
         {
-          email && (
-            <a href={`mailto:${email}`} aria-label={`Email ${name}`} title={email}>
-              <Mail />
-            </a>
-          )
-        }
-        {
           phone && (
             <a href={`tel:${phone.replace(/[^\d+]/g, "")}`} aria-label={`Call ${name}`} title={phone}>
               <Phone />
@@ -64,6 +58,20 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
           })
         }
       </footer>
+      <div class="actions no-print">
+        {
+          email && (
+            <a class="button primary" href={`mailto:${email}`}>
+              <span class="icon" aria-hidden="true"><Mail /></span>
+              Email me
+            </a>
+          )
+        }
+        <button class="button" type="button" data-print>
+          <Download />
+          Save as PDF
+        </button>
+      </div>
     </div>
     <figure>
       <img src={image} alt={`Portrait of ${name}`} width="128" height="128" />
@@ -139,6 +147,57 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     border-color: var(--surface-hover);
   }
 
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 0 16px;
+    font: inherit;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-strong);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 0.2s var(--ease-out), border-color 0.2s var(--ease-out), color 0.2s var(--ease-out);
+  }
+
+  .icon {
+    display: inline-flex;
+  }
+
+  .button:hover {
+    background: var(--surface);
+    border-color: var(--surface-hover);
+  }
+
+  .button.primary {
+    color: var(--accent-contrast);
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .button.primary:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+  }
+
+  @media (max-width: 560px) {
+    .actions .button {
+      flex: 1 1 auto;
+      justify-content: center;
+    }
+  }
+
   @media (max-width: 560px) {
     .container {
       flex-direction: column-reverse;
@@ -157,3 +216,9 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     }
   }
 </style>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>("[data-print]").forEach((button) => {
+    button.addEventListener("click", () => window.print());
+  });
+</script>
