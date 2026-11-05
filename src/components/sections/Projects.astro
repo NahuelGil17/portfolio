@@ -8,6 +8,9 @@ import { projects } from "@/cv.json";
     {
       projects.map((project) => {
         const highlights: string[] = ("highlights" in project && project.highlights) || [];
+        const startYear = new Date(project.startDate).getFullYear();
+        const endYear = project.endDate ? new Date(project.endDate).getFullYear() : "Present";
+        const period = startYear === endYear ? `${startYear}` : `${startYear} – ${endYear}`;
         return (
           <li>
             <article>
@@ -25,13 +28,11 @@ import { projects } from "@/cv.json";
                   ) : (
                     project.name
                   )}
-                  {project.isActive && (
-                    <span class="status" title="Active project">
-                      <span class="visually-hidden">Active</span>
-                    </span>
-                  )}
                 </h3>
-                {project.roles.length > 0 && <p class="roles">{project.roles.join(" · ")}</p>}
+                <p class="meta">
+                  <time datetime={project.startDate}>{period}</time>
+                  {project.roles.length > 0 && <span>{project.roles.join(" · ")}</span>}
+                </p>
               </header>
               <div class="body">
                 <p>{project.description}</p>
@@ -93,12 +94,21 @@ import { projects } from "@/cv.json";
     text-decoration-color: var(--accent);
   }
 
-  .roles {
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 2px;
     margin-top: 4px;
     color: var(--text-subtle);
     font-family: var(--font-mono);
     font-size: 0.75rem;
     line-height: 1.4;
+  }
+
+  .meta time {
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
   }
 
   .body {
@@ -121,23 +131,6 @@ import { projects } from "@/cv.json";
 
   .highlights li::marker {
     color: var(--accent);
-  }
-
-  .status {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--accent);
-    flex-shrink: 0;
-  }
-
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
   }
 
   .stack {
